@@ -1,0 +1,29 @@
+<h1>Productos</h1>
+  <h2 style="text-align: center;">BIENVENIDO
+    {{user.first_name}}
+    {{user.last_name}}</h2>
+  <p>Correo: {{user.email}}</p>
+  <table id="main">
+    <tr>
+      <th>Titulo</th>
+      <th>Descripcion</th>
+      <th>Precio</th>
+      <th>Imagen</th>
+      <th>Codigo</th>
+      <th>Cantidad</th>
+    </tr>
+    {{#each products}}
+      <tr>
+        <td>{{this.title}}</td>
+        <td>{{this.description}}</td>
+        <td>{{this.price}}</td>
+        <td>{{this.thumbnail}}</td>
+        <td>{{this.code}}</td>
+        <td>{{this.stock}}</td>
+      </tr>
+    {{/each}}
+  </table>
+    <footer>
+    <a href="/api/sessions/logout" role="button">Logout</a>
+  </footer>
+</article>
